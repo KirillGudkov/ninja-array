@@ -42,6 +42,7 @@ describe('Tests', () => {
     expect(array.get(4)).toBe(4);
     array.insert(50, 4);
     expect(array.get(4)).toBe(50);
+    expect(array.get(5)).toBe(4);
     expect(array.length).toBe(11);
   });
 
