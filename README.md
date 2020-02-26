@@ -12,8 +12,6 @@ including the following.
 - add `export { default } from 'extended-array';` to top of your root `index.js`
 - You're perfect!
 
-All extensions are available and TypeScript suggestions works! :)
-
 ### Available things:
 ```typescript
   // Returns last element of array
