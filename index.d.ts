@@ -21,17 +21,14 @@ declare class ArrayClass<T> {
   clear(): void
 
   // Removes item at the specified indices
-  // for example [1, 2, 3, 4, 5, 6, 7].remove(5, 3, 1)
-  // returns [1, 3, 5, 7]
   remove(...indices: number[]): T[]
 
   // Removes the last element of an array
   removeLast(): T[]
 
-  // Removes the first element of an array
-  removeFirst(): T[]
-
-  // Removes the N first elements of an array
+  // Removes N first elements of the array
+  // count = 1 by default.
+  // You can omit the count if want to remove the first item
   removeFirst(count: number): T[]
 
   // Removes and returns the last element of an array
