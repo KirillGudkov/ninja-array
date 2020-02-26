@@ -46,13 +46,13 @@ Object.defineProperty(Array.prototype, 'remove', {
 
 Object.defineProperty(Array.prototype, 'removeLast', {
   value: function(count = 1) {
-    // todo
+    this.splice(this.length - count, this.length - 1)
   }
 });
 
 Object.defineProperty(Array.prototype, 'removeFirst', {
   value: function(count = 1) {
-    // todo
+    this.splice(0, count)
   }
 });
 
