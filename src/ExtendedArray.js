@@ -28,6 +28,12 @@ Object.defineProperty(Array.prototype, 'get', {
   }
 });
 
+Object.defineProperty(Array.prototype, 'insert', {
+  value: function(element, position) {
+    this.splice(position, 0, element)
+  }
+});
+
 Object.defineProperty(Array.prototype, 'clear', {
   value: function() {
     this.length = 0;

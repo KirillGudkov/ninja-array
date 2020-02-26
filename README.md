@@ -26,6 +26,9 @@ All extensions are available and TypeScript suggestions works! :)
   // Returns the element of array at the specified index
   get(index: number): T
 
+  // Inserts element at specific position
+  insert(element: T, position: number): void
+
   // Removes all items
   clear(): void
 
