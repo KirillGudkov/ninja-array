@@ -26,8 +26,10 @@ declare class ArrayClass<T> {
   // Removes item at the specified indices
   remove(...indices: number[]): T[]
 
-  // Removes the last element of an array
-  removeLast(): T[]
+  // Removes N last elements of the array
+  // count = 1 by default.
+  // You can omit the count if want to remove the last item
+  removeLast(count: number): T[]
 
   // Removes N first elements of the array
   // count = 1 by default.
