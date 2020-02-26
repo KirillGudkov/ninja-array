@@ -1,6 +1,6 @@
-export { default } from '../src/ExtendedArray';
+export { default } from '../src/NinjaArray';
 
-describe('Tests', () => {
+describe('Ninja-Array tests', () => {
   let array;
 
   beforeEach(() => {

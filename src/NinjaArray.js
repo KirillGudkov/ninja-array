@@ -95,9 +95,32 @@ Object.defineProperty(Array.prototype, 'contains', {
 Object.defineProperty(Array.prototype, 'containsAll', {
   value: function(...elements) {
     for (let i = 0; i < elements.length; i++) {
-      if (this.indexOf(elements[i]) === -1) return false
+      if (this.indexOf(elements[i]) === -1) {
+        return false
+      }
     }
 
     return true
+  }
+});
+
+Object.defineProperty(Array.prototype, 'squash', {
+  value: function() {
+    console.log('squash is not implemented')
+    // todo
+  }
+});
+
+Object.defineProperty(Array.prototype, 'merge', {
+  value: function() {
+    console.log('merge is not implemented')
+    // todo
+  }
+});
+
+Object.defineProperty(Array.prototype, 'diff', {
+  value: function() {
+    console.log('diff - not implemented')
+    // todo
   }
 });

@@ -1,7 +1,12 @@
-# Extended Array
+# Ninja-Array
+The main advantage of this package - is Array.prototype extension
+and You don't need to use some specific object like `let a = new MySuperArray()`
+
+And it is compatible with TypeScript. IDE will offer you available methods, 
+including the following.
 
 ### Installation:
-- Add `"extended-array": "github:KirillGudkov/extended-array.git"` to your `package.json`
+- run `yarn add ninja-array`
 
 ### Usage
 - add `export { default } from 'extended-array';` to top of your root `index.js`
@@ -29,14 +34,16 @@ All extensions are available and TypeScript suggestions works! :)
   // Inserts element at specific position
   insert(element: T, position: number): void
 
-  // Removes all items
+  // Removes all elements
   clear(): void
 
-  // Removes item at the specified indices
+  // Removes elements at the specified indices
   remove(...indices: number[]): T[]
 
-  // Removes the last element of an array
-  removeLast(): T[]
+  // Removes N last elements of the array
+  // count = 1 by default. 
+  // You can omit the count if want to remove the last item
+  removeLast(count: number = 1): T[]
 
   // Removes N first elements of the array
   // count = 1 by default. 
@@ -57,4 +64,17 @@ All extensions are available and TypeScript suggestions works! :)
 
   // Returns true if array contains all of specified elements
   containsAll(...elements: T[]): boolean
+
+  // Returns array without duplicate
+  // [1, 1, 2, 2] -> [1, 2]
+  squash(): T[]
+
+  // Returns union of two arrays
+  // [1, 2, 3].merge([4, 5]) -> [1, 2, 3, 4, 5]
+  merge(array: Array<T>): T[]
+
+  // Returns difference of two arrays
+  // [1, 2].diff([1, 2, 3]) -> [3]
+  diff(array: Array<T>): T[]
+
 ```

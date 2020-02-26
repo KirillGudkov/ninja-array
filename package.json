@@ -1,10 +1,29 @@
 {
-  "name": "extended-array",
+  "name": "ninja-array",
   "version": "1.0.0",
-  "description": "",
+  "description": "A little bit of power to JavaScript Array",
   "main": "index.js",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "array",
+    "extended",
+    "extended array",
+    "array with extensions",
+    "array extensions",
+    "extensions",
+    "arrayList",
+    "JavaScript array",
+    "TypeScript extended array",
+    "TypeScript array"
+  ],
+  "author": "Kirill Gudkov",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KirillGudkov/ninja-array.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KirillGudkov/ninja-array/issues"
+  },
+  "homepage": "https://github.com/KirillGudkov/ninja-array#readme",
   "license": "ISC",
   "devDependencies": {
     "jest": "25.1.0",
