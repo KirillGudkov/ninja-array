@@ -9,7 +9,7 @@ including the following.
 - run `yarn add ninja-array`
 
 ### Usage
-- add `export { default } from 'extended-array';` to top of your root `index.js`
+- add `export { default } from 'ninja-array';` to top of your root `index.js`
 - You're perfect!
 
 ### Available things:
