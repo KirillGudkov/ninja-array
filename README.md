@@ -23,8 +23,8 @@ All extensions are available and TypeScript suggestions works! :)
   // Returns true if length > 0
   get isNotEmpty(): boolean;
 
-  // Returns the element of array at the specified index
-  get(index: number): T
+  // Returns the element of array at the specified position
+  get(position: number): T
 
   // Inserts element at specific position
   insert(element: T, position: number): void
