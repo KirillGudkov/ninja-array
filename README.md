@@ -12,16 +12,16 @@ All extensions are available and TypeScript suggestions works! :)
 ### Available things:
 ```typescript
   // Returns last element of array
-  get last(): T;
+  last: T;
 
   // Returns first element of array
-  get first(): T;
+  first: T;
 
   // Returns true if length == 0
-  get isEmpty(): boolean;
+  isEmpty: boolean;
 
   // Returns true if length > 0
-  get isNotEmpty(): boolean;
+  isNotEmpty: boolean;
 
   // Returns the element of array at the specified position
   get(position: number): T
