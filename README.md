@@ -10,15 +10,14 @@ including the following.
 
 ### Usage
 - add `import 'extended-array';` to your root `index.js`
-- You're perfect!
+- You're perfect! Your Array is upgraded!
 
-### Example
 ```typescript
-const arr = [1, 2, 3];
+const array = [1, 2, 3];
 
-console.log(arr.first);         // -> 1
-console.log(arr.last);          // -> 3
-console.log(arr.removeLast(2)); // -> [1]
+console.log(array.first);         // -> 1
+console.log(array.last);          // -> 3
+console.log(array.removeLast(2)); // -> [1]
 ```
 
 ### Available things:
