@@ -12,6 +12,16 @@ including the following.
 - add `export { default } from 'ninja-array';` to top of your root `index.js`
 - You're perfect!
 
+## Example
+```typescript
+const arr = [1, 2, 3];
+
+console.log(arr.first);         // -> 1
+console.log(arr.last);          // -> 3
+console.log(arr.popLast());     // -> 3
+console.log(arr.remove(0, 2));  // -> [2]
+```
+
 ### Available things:
 ```typescript
   // Returns last element of array
