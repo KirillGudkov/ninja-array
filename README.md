@@ -35,11 +35,10 @@ All extensions are available and TypeScript suggestions works! :)
   // Removes the last element of an array
   removeLast(): T[]
 
-  // Removes the first element of an array
-  removeFirst(): T[]
-
-  // Removes the N first elements of an array
-  removeFirst(count: number): T[]
+  // Removes N first elements of the array
+  // count = 1 by default. 
+  // You can omit the count if want to remove the first item
+  removeFirst(count: number = 1): T[]
 
   // Removes and returns the last element of an array
   popLast(): T
