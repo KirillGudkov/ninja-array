@@ -1,10 +1,18 @@
-Array.prototype.remove = (...indices) => {
-  indices.sort().forEach((index, current) => {
-    Array.prototype.splice(index - current, 1);
-  });
+Object.defineProperty(Array.prototype, 'get', {
+  value: function(i) {
+    return this[i];
+  }
+});
 
-  return Array.prototype;
-};
+Object.defineProperty(Array.prototype, 'remove', {
+  value: function(...indices) {
+    indices.sort().forEach((index, current) => {
+      this.splice(index - current, 1);
+    });
+
+    return this;
+  }
+});
 
 Object.defineProperty(Array.prototype, 'isEmpty', {
   get: function isEmpty() {
@@ -29,4 +37,3 @@ Object.defineProperty(Array.prototype, 'first', {
     return this[0];
   }
 });
-
