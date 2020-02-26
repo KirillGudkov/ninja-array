@@ -20,7 +20,7 @@ declare class ArrayClass<T> {
   // Removes all items
   clear(): void
 
-  // Removes item at the specified indicies
+  // Removes item at the specified indices
   // for example [1, 2, 3, 4, 5, 6, 7].remove(5, 3, 1)
   // returns [1, 3, 5, 7]
   remove(...indices: number[]): T[]
@@ -34,13 +34,13 @@ declare class ArrayClass<T> {
   // Removes the N first elements of an array
   removeFirst(count: number): T[]
 
-  // Removes and returnes the last element of an array
+  // Removes and returns the last element of an array
   popLast(): T
 
-  // Removes and returnes the first element of an array
+  // Removes and returns the first element of an array
   popFirst(): T
 
-  // Swaps elements at the specified indicies
+  // Swaps elements at the specified indices
   swap(a: number, b: number): void
 
   // Returns true if array contains the specified element
