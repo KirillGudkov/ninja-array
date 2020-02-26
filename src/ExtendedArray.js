@@ -1,3 +1,4 @@
+console.log(11)
 Array.prototype.remove = (...indices) => {
   indices.sort().forEach((index, current) => {
     Array.prototype.splice(index - current, 1);
@@ -29,3 +30,4 @@ Object.defineProperty(Array.prototype, 'first', {
     return this[0];
   }
 });
+
