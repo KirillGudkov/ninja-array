@@ -1,4 +1,3 @@
-console.log(11)
 Array.prototype.remove = (...indices) => {
   indices.sort().forEach((index, current) => {
     Array.prototype.splice(index - current, 1);
