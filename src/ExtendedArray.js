@@ -46,42 +46,52 @@ Object.defineProperty(Array.prototype, 'remove', {
 
 Object.defineProperty(Array.prototype, 'removeLast', {
   value: function(count = 1) {
-    this.splice(this.length - count, this.length - 1)
+    this.splice(this.length - count, this.length - 1);
+
+    return this;
   }
 });
 
 Object.defineProperty(Array.prototype, 'removeFirst', {
   value: function(count = 1) {
-    this.splice(0, count)
+    this.splice(0, count);
+
+    return this;
   }
 });
 
 Object.defineProperty(Array.prototype, 'popLast', {
   value: function() {
-    // todo
+    return this.splice(this.length - 1, this.length)[0];
   }
 });
 
 Object.defineProperty(Array.prototype, 'popFirst', {
   value: function() {
-    // todo
+    return this.splice(0, 1)[0];
   }
 });
 
 Object.defineProperty(Array.prototype, 'swap', {
   value: function(a, b) {
-    // todo
+    let temp = this[a];
+    this[a] = this[b];
+    this[b] = temp;
   }
 });
 
 Object.defineProperty(Array.prototype, 'contains', {
   value: function(element) {
-    // todo
+    return this.indexOf(element) !== -1;
   }
 });
 
 Object.defineProperty(Array.prototype, 'containsAll', {
   value: function(...elements) {
-    // todo
+    for (let i = 0; i < elements.length; i++) {
+      if (this.indexOf(elements[i]) === -1) return false
+    }
+
+    return true
   }
 });
