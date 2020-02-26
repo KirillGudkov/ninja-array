@@ -3,10 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "25.1.0",
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "7.8.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ]
+  }
 }
