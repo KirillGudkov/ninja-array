@@ -1,6 +1,8 @@
 # Ninja-Array
 ### Array extension for TypeScript
 
+![Node.js CI](https://github.com/KirillGudkov/ninja-array/workflows/Node.js%20CI/badge.svg?branch=master)
+
 >The main advantage of this package - is Array.prototype extension
 >
 >You don't need to use some specific object like `let a = new MySuperArray()`
