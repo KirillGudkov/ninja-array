@@ -252,12 +252,12 @@ describe('Ninja-Array tests', () => {
   });
 
   /**
-   * squash() tests
+   * collapse() tests
    *
    */
-  test('squash() should remove duplicates', () => {
+  test('collapse() should remove duplicates', () => {
     array = [1, 1, 2, 2, 3, 4, 5, 5];
-    expect(JSON.stringify(array.squash())).toBe(JSON.stringify([1, 2, 3, 4, 5]));
+    expect(JSON.stringify(array.collapse())).toBe(JSON.stringify([1, 2, 3, 4, 5]));
   });
 
   /**

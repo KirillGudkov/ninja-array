@@ -53,7 +53,7 @@ declare class NinjaArray<T> {
 
   // Returns array without duplicate
   // [1, 1, 2, 2] -> [1, 2]
-  squash(): T[]
+  collapse(): T[]
 
   // Returns union of two arrays
   // [1, 2, 3].merge([4, 5]) -> [1, 2, 3, 4, 5]
