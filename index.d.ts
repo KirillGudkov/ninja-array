@@ -1,6 +1,6 @@
 export {};
 
-declare class ArrayClass<T> {
+declare class NinjaArray<T> {
 
   // Returns last element of array
   get last(): T;
@@ -74,5 +74,5 @@ declare class ArrayClass<T> {
 }
 
 declare global {
-  interface Array<T> extends ArrayClass<T> {}
+  interface Array<T> extends NinjaArray<T> {}
 }
