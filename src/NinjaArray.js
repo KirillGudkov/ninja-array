@@ -106,21 +106,48 @@ Object.defineProperty(Array.prototype, 'containsAll', {
 
 Object.defineProperty(Array.prototype, 'squash', {
   value: function() {
-    console.log('squash is not implemented')
-    // todo
+    let result = [];
+
+    this.forEach(item => {
+      if (result.indexOf(item) === -1) {
+        result.push(item)
+      }
+    });
+
+    return result
   }
 });
 
 Object.defineProperty(Array.prototype, 'merge', {
-  value: function() {
-    console.log('merge is not implemented')
-    // todo
+  value: function(array) {
+    let result = [];
+
+    array.forEach(item => {
+      if (this.indexOf(item) === -1) {
+        result.push(item)
+      }
+    });
+
+    return this.concat(result);
   }
 });
 
 Object.defineProperty(Array.prototype, 'diff', {
-  value: function() {
-    console.log('diff - not implemented')
-    // todo
+  value: function(array) {
+    let result = [];
+
+    array.forEach(item => {
+      if (this.indexOf(item) === -1) {
+        result.push(item)
+      }
+    });
+
+    this.forEach(item => {
+      if (array.indexOf(item) === -1 && result.indexOf(item) === -1) {
+        result.push(item)
+      }
+    });
+
+    return result;
   }
 });
