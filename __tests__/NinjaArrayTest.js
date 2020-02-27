@@ -144,4 +144,17 @@ describe('Ninja-Array tests', () => {
   test('containsAll(1, 2, 10) should return false', () => {
     expect(array.containsAll(1, 2, 10)).toBeFalsy();
   });
+
+  test('squash() should remove duplicates', () => {
+    array = [1, 1, 2, 2, 3, 4, 5, 5];
+    expect(JSON.stringify(array.squash())).toBe(JSON.stringify([1, 2, 3, 4, 5]));
+  });
+
+  test('merge(arr) should return the array with union of them', () => {
+    expect(JSON.stringify(array.merge(['a', 'b']))).toBe(JSON.stringify([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b']));
+  });
+
+  test('diff(arr) should return the array with difference of them', () => {
+    expect(JSON.stringify(array.diff([1, 2, 3, 4, 5, 15]))).toBe(JSON.stringify([15, 0, 6, 7, 8, 9]));
+  });
 });
