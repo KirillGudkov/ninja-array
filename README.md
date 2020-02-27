@@ -1,15 +1,18 @@
 # Ninja-Array
-The main advantage of this package - is Array.prototype extension
-and You don't need to use some specific object like `let a = new MySuperArray()`
+### Array extension for TypeScript
 
-And it is compatible with TypeScript. IDE will offer you available methods, 
-including the following.
+>The main advantage of this package - is Array.prototype extension
+>
+>You don't need to use some specific object like `let a = new MySuperArray()`
+>
+>And it is compatible with TypeScript. IDE will offer you available methods, 
+>including the following.
 
 ### Installation:
 - run `yarn add ninja-array`
 
 ### Usage
-- add `import 'extended-array';` to your root `index.js`
+- Add `import 'ninja-array';` to your root `index.js`
 - You're perfect! Your Array is upgraded!
 
 ```typescript
