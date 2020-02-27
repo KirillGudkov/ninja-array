@@ -1,1 +1,1 @@
-export { default } from './src/ExtendedArray.js';
+export { default } from './src/NinjaArray.js';
