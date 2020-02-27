@@ -297,18 +297,18 @@ describe('Ninja-Array tests', () => {
    *
    */
   test('equal(arr) should return true, when arrays actually equal', () => {
-    expect([1, 2, 3].identical([1, 2, 3])).toBeTruthy();
+    expect([1, 2, 3].equal([1, 2, 3])).toBeTruthy();
   });
 
   test('equal(arr) should return true, when arrays actually equal, despite order', () => {
-    expect([1, 2, 3].identical([3, 2, 1])).toBeFalsy();
+    expect([1, 2, 3].equal([3, 2, 1])).toBeTruthy();
   });
 
   test('equal(arr) should return false, when arrays not equal', () => {
-    expect([1, 2, 3].identical([4, 2, 1])).toBeFalsy();
+    expect([1, 2, 3].equal([4, 2, 1])).toBeFalsy();
   });
 
   test('equal(arr) should return false, when length not equal', () => {
-    expect([1, 2, 3].identical([1, 2])).toBeFalsy();
+    expect([1, 2, 3].equal([1, 2])).toBeFalsy();
   });
 });
