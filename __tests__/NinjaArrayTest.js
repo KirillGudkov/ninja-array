@@ -1,6 +1,6 @@
 import '../src/NinjaArray';
 
-describe('Ninja-Array tests', () => {
+describe('get properties tests', () => {
   let array;
 
   beforeEach(() => {
@@ -49,18 +49,27 @@ describe('Ninja-Array tests', () => {
     expect(array.isNotEmpty).toBeFalsy()
   });
 
-  /**
-   * get() tests
-   *
-   */
-  test('get() should return right value', () => {
-    expect(array.get(3)).toBe(3)
+});
+
+describe('get() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   });
 
-  /**
-   * insert() tests
-   *
-   */
+  test('Should return right value', () => {
+    expect(array.get(3)).toBe(3)
+  });
+});
+
+describe('insert() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
   test('after insert() array must contain a right element at right position, and length should be increased by one', () => {
     expect(array.length).toBe(10);
     expect(array.get(4)).toBe(4);
@@ -69,39 +78,47 @@ describe('Ninja-Array tests', () => {
     expect(array.get(5)).toBe(4);
     expect(array.length).toBe(11);
   });
+});
 
-  /**
-   * clear() tests
-   *
-   */
+describe('clear() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
   test('array.length should be 0 after clear()', () => {
     array.clear();
     expect(array.isEmpty).toBeTruthy()
   });
+});
 
-  /**
-   * remove() tests
-   *
-   */
-  test('remove(2) should decrease length by one', () => {
+describe('remove() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should decrease length by one', () => {
     expect(array.length).toBe(10);
     array.remove(2);
     expect(array.length).toBe(9);
   });
 
-  test('remove(2) should remove element on position = 2', () => {
+  test('Should remove element on position = 2', () => {
     expect(array.get(2)).toBe(2);
     array.remove(2);
     expect(array.get(2)).toBe(3);
   });
 
-  test('remove(15) should do nothing, because it doesnt  exist', () => {
+  test('Should do nothing, because it doesnt exist', () => {
     expect(array.get(2)).toBe(2);
     array.remove(15);
     expect(array.get(2)).toBe(2);
   });
 
-  test('remove(2, 3, 5) should remove element on position 2, 3 and 5', () => {
+  test('Should remove element on position 2, 3 and 5', () => {
     expect(array.get(2)).toBe(2);
     expect(array.get(3)).toBe(3);
     expect(array.get(5)).toBe(5);
@@ -111,7 +128,7 @@ describe('Ninja-Array tests', () => {
     expect(array.get(5)).toBe(8);
   });
 
-  test('remove(2, 5, 3) should remove element on position 2, 3 and 5 despite on order', () => {
+  test('Should remove element on position 2, 3 and 5 despite on order', () => {
     expect(array.get(2)).toBe(2);
     expect(array.get(3)).toBe(3);
     expect(array.get(5)).toBe(5);
@@ -120,12 +137,16 @@ describe('Ninja-Array tests', () => {
     expect(array.get(3)).toBe(6);
     expect(array.get(5)).toBe(8);
   });
+});
 
-  /**
-   * removeLast() tests
-   *
-   */
-  test('removeLast() should remove last element', () => {
+describe('removeLast() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should remove last element', () => {
     expect(array.last).toBe(9);
     array.removeLast();
     expect(array.last).toBe(8);
@@ -138,7 +159,7 @@ describe('Ninja-Array tests', () => {
     expect(array.length).toBe(0);
   });
 
-  test('removeLast(3) should remove 3 last elements', () => {
+  test('Should remove 3 last elements', () => {
     expect(array.last).toBe(9);
     array.removeLast(3);
     expect(array.last).toBe(6);
@@ -151,28 +172,36 @@ describe('Ninja-Array tests', () => {
     expect(array.length).toBe(0);
     expect(array.last).toBeUndefined();
   });
+});
 
-  /**
-   * removeFirst() tests
-   *
-   */
-  test('removeFirst() should remove first element', () => {
+describe('removeFirst() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should remove first element', () => {
     expect(array.first).toBe(0);
     array.removeFirst();
     expect(array.first).toBe(1);
   });
 
-  test('removeFirst(3) should remove 3 first elements', () => {
+  test('Should remove 3 first elements', () => {
     expect(array.first).toBe(0);
     array.removeFirst(3);
     expect(array.first).toBe(3);
   });
+});
 
-  /**
-   * popLast() tests
-   *
-   */
-  test('popLast() should remove last element and return it', () => {
+describe('popLast() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should remove last element and return it', () => {
     expect(array.length).toBe(10);
     let a = array.popLast();
     expect(a).toBe(9);
@@ -183,23 +212,31 @@ describe('Ninja-Array tests', () => {
     array.clear();
     expect(array.popLast()).toBeUndefined();
   });
+});
 
-  /**
-   * popFirst() tests
-   *
-   */
-  test('popFirst() should remove first element and return it', () => {
+describe('popFirst() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should remove first element and return it', () => {
     expect(array.length).toBe(10);
     let a = array.popFirst();
     expect(a).toBe(0);
     expect(array.length).toBe(9);
   });
+});
 
-  /**
-   * swap() tests
-   *
-   */
-  test('swap(1, 2) should swap elements at 1 and 2 positions', () => {
+describe('swap() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should swap elements at 1 and 2 positions', () => {
     expect(array.get(1)).toBe(1);
     expect(array.get(2)).toBe(2);
     array.swap(1, 2);
@@ -221,94 +258,122 @@ describe('Ninja-Array tests', () => {
     expect(array.length).toBe(1);
     expect(JSON.stringify(array)).toBe(JSON.stringify([1]));
   });
+});
 
-  /**
-   * contains() tests
-   *
-   */
-  test('contains(3) should return true', () => {
+describe('contains() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should return true', () => {
     expect(array.contains(3)).toBeTruthy();
   });
 
-  test('contains(10) should return false', () => {
+  test('Should return false', () => {
     expect(array.contains(10)).toBeFalsy();
   });
 
-  test('contains(3) on empty array should return false', () => {
+  test('Should return false', () => {
     array.clear();
     expect(array.contains(3)).toBeFalsy();
   });
+});
 
-  /**
-   * containsAll() tests
-   *
-   */
-  test('containsAll(1, 2, 3) should return true', () => {
+describe('containsAll() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should return true', () => {
     expect(array.containsAll(1, 2, 3)).toBeTruthy();
   });
 
-  test('containsAll(1, 2, 10) should return false', () => {
+  test('Should return false', () => {
     expect(array.containsAll(1, 2, 10)).toBeFalsy();
   });
+});
 
-  /**
-   * collapse() tests
-   *
-   */
-  test('collapse() should remove duplicates', () => {
+describe('collapse() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should remove duplicates', () => {
     array = [1, 1, 2, 2, 3, 4, 5, 5];
     expect(JSON.stringify(array.collapse())).toBe(JSON.stringify([1, 2, 3, 4, 5]));
   });
+});
 
-  /**
-   * merge() tests
-   *
-   */
-  test('merge(arr) should return the array with union of them', () => {
+describe('merge() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should return the array with union of them', () => {
     expect(JSON.stringify(array.merge(['a', 'b']))).toBe(JSON.stringify([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b']));
   });
+});
 
-  /**
-   * diff() tests
-   *
-   */
-  test('diff(arr) should return the array with difference of them', () => {
-    expect(JSON.stringify(array.diff([1, 2, 3, 4, 5, 15]))).toBe(JSON.stringify([15, 0, 6, 7, 8, 9]));
+describe('diff() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
   });
 
-  /**
-   * identical() tests
-   *
-   */
-  test('identical(arr) should return true, when arrays actually identical', () => {
+  test('Should return the array with difference of them', () => {
+    expect(JSON.stringify(array.diff([1, 2, 3, 4, 5, 15]))).toBe(JSON.stringify([15, 0, 6, 7, 8, 9]));
+  });
+});
+
+describe('identical() test', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should return true, when arrays actually identical', () => {
     expect([1, 2, 3].identical([1, 2, 3])).toBeTruthy();
   });
 
-  test('identical(arr) should return false, when arrays not identical', () => {
+  test('Should return false, when arrays not identical', () => {
     expect([1, 2, 3].identical([1, 2, 2])).toBeFalsy();
   });
 
-  test('identical(arr) should return false, when when length not equal', () => {
+  test('Should return false, when when length not equal', () => {
     expect([1, 2, 3].identical([1, 2])).toBeFalsy();
   });
+});
 
-  /**
-   * equal() tests
-   *
-   */
-  test('equal(arr) should return true, when arrays actually equal', () => {
+describe('equal() tests', () => {
+  let array;
+
+  beforeEach(() => {
+    array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  });
+
+  test('Should return true, when arrays actually equal', () => {
     expect([1, 2, 3].equal([1, 2, 3])).toBeTruthy();
   });
 
-  test('equal(arr) should return true, when arrays actually equal, despite order', () => {
+  test('Should return true, when arrays actually equal, despite order', () => {
     expect([1, 2, 3].equal([3, 2, 1])).toBeTruthy();
   });
 
-  test('equal(arr) should return false, when arrays not equal', () => {
+  test('Should return false, when arrays not equal', () => {
     expect([1, 2, 3].equal([4, 2, 1])).toBeFalsy();
   });
 
-  test('equal(arr) should return false, when length not equal', () => {
+  test('Should return false, when length not equal', () => {
     expect([1, 2, 3].equal([1, 2])).toBeFalsy();
   });
 });

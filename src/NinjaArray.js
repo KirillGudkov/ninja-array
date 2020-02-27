@@ -106,7 +106,7 @@ Object.defineProperty(Array.prototype, 'containsAll', {
   }
 });
 
-Object.defineProperty(Array.prototype, 'squash', {
+Object.defineProperty(Array.prototype, 'collapse', {
   value: function() {
     let result = [];
 
