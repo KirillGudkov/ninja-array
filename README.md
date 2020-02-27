@@ -83,4 +83,12 @@ console.log(array.removeLast(2)); // -> [1]
   // [1, 2].diff([1, 2, 3]) -> [3]
   diff(array: Array<T>): T[]
 
+  // Returns true if arrays are identical, including order
+  // [1, 2, 3] == [1, 2, 3], but [1, 2, 3] != [3, 2 ,1]
+  identical(array: T[]): boolean
+
+  // Returns true if arrays contents are equal, despite order
+  // [1, 2, 3] == [1, 2, 3], but [1, 2, 3] == [3, 2 ,1]
+  equal(array: T[]): boolean
+
 ```

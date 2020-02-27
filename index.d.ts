@@ -51,6 +51,26 @@ declare class ArrayClass<T> {
   // Returns true if array contains all of specified elements
   containsAll(...elements: T[]): boolean
 
+  // Returns array without duplicate
+  // [1, 1, 2, 2] -> [1, 2]
+  squash(): T[]
+
+  // Returns union of two arrays
+  // [1, 2, 3].merge([4, 5]) -> [1, 2, 3, 4, 5]
+  merge(array: Array<T>): T[]
+
+  // Returns difference of two arrays
+  // [1, 2].diff([1, 2, 3]) -> [3]
+  diff(array: Array<T>): T[]
+
+  // Returns true if arrays are identical, including order
+  // [1, 2, 3] == [1, 2, 3], but [1, 2, 3] != [3, 2 ,1]
+  identical(array: T[]): boolean
+
+  // Returns true if arrays contents are equal, despite order
+  // [1, 2, 3] == [1, 2, 3], but [1, 2, 3] == [3, 2 ,1]
+  equal(array: T[]): boolean
+
 }
 
 declare global {

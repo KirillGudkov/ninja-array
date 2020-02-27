@@ -63,6 +63,12 @@ describe('Ninja-Array tests', () => {
     expect(array.get(2)).toBe(3);
   });
 
+  test('remove(15) should do nothing, because it doesnt  exist', () => {
+    expect(array.get(2)).toBe(2);
+    array.remove(15);
+    expect(array.get(2)).toBe(2);
+  });
+
   test('remove(2, 3, 5) should remove element on position 2, 3 and 5', () => {
     expect(array.get(2)).toBe(2);
     expect(array.get(3)).toBe(3);
@@ -89,10 +95,25 @@ describe('Ninja-Array tests', () => {
     expect(array.last).toBe(8);
   });
 
+  test('removeLast() with empty array should return empty array', () => {
+    array.clear();
+    expect(array.length).toBe(0);
+    array.removeLast();
+    expect(array.length).toBe(0);
+  });
+
   test('removeLast(3) should remove 3 last elements', () => {
     expect(array.last).toBe(9);
     array.removeLast(3);
     expect(array.last).toBe(6);
+  });
+
+  test('removeLast(3) on empty array should return empty array', () => {
+    array.clear();
+    expect(array.length).toBe(0);
+    array.removeLast(3);
+    expect(array.length).toBe(0);
+    expect(array.last).toBeUndefined();
   });
 
   test('removeFirst() should remove first element', () => {
@@ -114,6 +135,11 @@ describe('Ninja-Array tests', () => {
     expect(array.length).toBe(9);
   });
 
+  test('popLast() on empty array should return undefined', () => {
+    array.clear();
+    expect(array.popLast()).toBeUndefined();
+  });
+
   test('popFirst() should remove first element and return it', () => {
     expect(array.length).toBe(10);
     let a = array.popFirst();
@@ -129,12 +155,32 @@ describe('Ninja-Array tests', () => {
     expect(array.get(2)).toBe(1);
   });
 
+  test('swap(1, 2) on empty array should do nothing', () => {
+    array.clear();
+    expect(array.length).toBe(0);
+    array.swap(1, 2);
+    expect(array.length).toBe(0);
+  });
+
+  test('swap(1, 2) on array = [1] should do nothing', () => {
+    array = [1];
+    expect(array.length).toBe(1);
+    array.swap(1, 2);
+    expect(array.length).toBe(1);
+    expect(JSON.stringify(array)).toBe(JSON.stringify([1]));
+  });
+
   test('contains(3) should return true', () => {
     expect(array.contains(3)).toBeTruthy();
   });
 
   test('contains(10) should return false', () => {
     expect(array.contains(10)).toBeFalsy();
+  });
+
+  test('contains(3) on empty array should return false', () => {
+    array.clear();
+    expect(array.contains(3)).toBeFalsy();
   });
 
   test('containsAll(1, 2, 3) should return true', () => {

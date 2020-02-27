@@ -80,9 +80,11 @@ Object.defineProperty(Array.prototype, 'popFirst', {
 
 Object.defineProperty(Array.prototype, 'swap', {
   value: function(a, b) {
-    let temp = this[a];
-    this[a] = this[b];
-    this[b] = temp;
+    if (this.length > 1) {
+      let temp = this[a];
+      this[a] = this[b];
+      this[b] = temp;
+    }
   }
 });
 
@@ -149,5 +151,41 @@ Object.defineProperty(Array.prototype, 'diff', {
     });
 
     return result;
+  }
+});
+
+Object.defineProperty(Array.prototype, 'identical', {
+  value: function(array) {
+    let result = true;
+
+    if (this.length !== array.length) {
+      return false
+    }
+
+    this.forEach((item, index) => {
+      if (item !== array[index]) {
+        result = false
+      }
+    });
+
+    return result
+  }
+});
+
+Object.defineProperty(Array.prototype, 'equal', {
+  value: function(array) {
+    let result = true;
+
+    if (this.length !== array.length) {
+      return false
+    }
+
+    this.forEach(item => {
+      if (array.indexOf(item) === -1) {
+        result = false
+      }
+    });
+
+    return result
   }
 });
