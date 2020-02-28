@@ -374,6 +374,6 @@ describe('equal() tests', () => {
   });
 
   test('Should return false, when length not equal', () => {
-    expect([1, 2, 3].equal([1, 2])).toBeFalsy();
+    expect([1, 2, 3].equal([1, 2])).toBeTruthy();
   });
 });

@@ -1,11 +1,14 @@
 name: npm-publish
+
 on:
   push:
     branches:
       - master
+
 jobs:
   npm-publish:
     name: npm-publish
+    needs: run-tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
