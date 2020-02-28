@@ -1,6 +1,9 @@
-name: test & npm deploy
+name: tests
 
-on: [push]
+on:
+  push:
+    branches:
+      - develop
 
 jobs:
   run-tests:
@@ -12,12 +15,12 @@ jobs:
         node-version: [11.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: yarn install
-    - run: yarn jest
-      env:
-        CI: true
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: yarn install
+      - run: yarn jest
+        env:
+          CI: true
