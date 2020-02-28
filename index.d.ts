@@ -18,7 +18,8 @@ declare class NinjaArray<T> {
   get(position: number): T
 
   // Inserts element at specific position
-  insert(element: T, position: number): void
+  // position = 0  by default
+  insert(element: T, position?: number): void
 
   // Removes all items
   clear(): void
@@ -29,12 +30,12 @@ declare class NinjaArray<T> {
   // Removes N last elements of the array
   // count = 1 by default.
   // You can omit the count if want to remove the last item
-  removeLast(count: number): T[]
+  removeLast(count?: number): T[]
 
   // Removes N first elements of the array
   // count = 1 by default.
   // You can omit the count if want to remove the first item
-  removeFirst(count: number): T[]
+  removeFirst(count?: number): T[]
 
   // Removes and returns the last element of an array
   popLast(): T

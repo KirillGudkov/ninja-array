@@ -78,6 +78,13 @@ describe('insert() tests', () => {
     expect(array.get(5)).toBe(4);
     expect(array.length).toBe(11);
   });
+
+  test('after insert() empty array must contain only one element', () => {
+    array = [];
+    array.insert('element');
+    expect(array.get(0)).toBe('element');
+    expect(array.length).toBe(1);
+  });
 });
 
 describe('clear() tests', () => {

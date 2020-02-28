@@ -29,7 +29,7 @@ Object.defineProperty(Array.prototype, 'get', {
 });
 
 Object.defineProperty(Array.prototype, 'insert', {
-  value: function(element, position) {
+  value: function(element, position = 0) {
     this.splice(position, 0, element)
   }
 });

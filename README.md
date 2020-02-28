@@ -43,7 +43,8 @@ console.log(array.removeLast(2)); // -> [1]
   get(position: number): T
 
   // Inserts element at specific position
-  insert(element: T, position: number): void
+  // position = 0  by default
+  insert(element: T, position?: number): void
 
   // Removes all elements
   clear(): void
@@ -54,12 +55,12 @@ console.log(array.removeLast(2)); // -> [1]
   // Removes N last elements of the array
   // count = 1 by default. 
   // You can omit the count if want to remove the last item
-  removeLast(count: number = 1): T[]
+  removeLast(count?: number): T[]
 
   // Removes N first elements of the array
   // count = 1 by default. 
   // You can omit the count if want to remove the first item
-  removeFirst(count: number = 1): T[]
+  removeFirst(coun?: number): T[]
 
   // Removes and returns the last element of an array
   popLast(): T
@@ -82,11 +83,11 @@ console.log(array.removeLast(2)); // -> [1]
 
   // Returns union of two arrays
   // [1, 2, 3].merge([4, 5]) -> [1, 2, 3, 4, 5]
-  merge(array: Array<T>): T[]
+  merge(array: T[]>): T[]
 
   // Returns difference of two arrays
   // [1, 2].diff([1, 2, 3]) -> [3]
-  diff(array: Array<T>): T[]
+  diff(array: T[]): T[]
 
   // Returns true if arrays are identical, including order
   // [1, 2, 3] == [1, 2, 3], 
