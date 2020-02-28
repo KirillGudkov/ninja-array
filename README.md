@@ -1,14 +1,14 @@
 # Ninja-Array
 ### Array extension for TypeScript
 
->The main advantage of this package - is Array.prototype extension
->
->You don't need to use some specific object like `let a = new MySuperArray()`
->
->And it is compatible with TypeScript. IDE will offer you available methods, 
->including the following.
->
-><img width="638" alt="Снимок экрана 2020-02-28 в 11 14 12" src="https://user-images.githubusercontent.com/17552441/75522634-7d3d2f00-5a1b-11ea-8d00-376b56efd3e1.png">
+The main advantage of this package - is Array.prototype extension
+
+You don't need to use some specific object like `let a = new MySuperArray()`
+
+And it is compatible with TypeScript. IDE will offer you available methods, 
+including the following.
+
+<img width="638" alt="Снимок экрана 2020-02-28 в 11 14 12" src="https://user-images.githubusercontent.com/17552441/75522634-7d3d2f00-5a1b-11ea-8d00-376b56efd3e1.png">
 
 ### Installation:
 - run `yarn add ninja-array`
