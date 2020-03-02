@@ -1,6 +1,6 @@
 {
   "name": "ninja-array",
-  "version": "1.0.31",
+  "version": "1.0.32",
   "description": "A little bit of power to JavaScript Array",
   "main": "index.js",
   "keywords": [

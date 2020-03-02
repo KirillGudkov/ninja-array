@@ -58,11 +58,11 @@ declare class NinjaArray<T> {
 
   // Returns union of two arrays
   // [1, 2, 3].merge([4, 5]) -> [1, 2, 3, 4, 5]
-  merge(array: Array<T>): T[]
+  merge(array: T[]): T[]
 
   // Returns difference of two arrays
   // [1, 2].diff([1, 2, 3]) -> [3]
-  diff(array: Array<T>): T[]
+  diff(array: T[]): T[]
 
   // Returns true if arrays are identical, including order
   // [1, 2, 3] == [1, 2, 3], but [1, 2, 3] != [3, 2 ,1]

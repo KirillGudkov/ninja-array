@@ -83,7 +83,7 @@ console.log(array.removeLast(2)); // -> [1]
 
   // Returns union of two arrays
   // [1, 2, 3].merge([4, 5]) -> [1, 2, 3, 4, 5]
-  merge(array: T[]>): T[]
+  merge(array: T[]): T[]
 
   // Returns difference of two arrays
   // [1, 2].diff([1, 2, 3]) -> [3]
