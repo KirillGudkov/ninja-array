@@ -1,7 +1,7 @@
 Object.defineProperty(Array.prototype, 'last', {
   get: function last() {
     if (this._last) {
-      return this._last()
+      return this._last
     }
     return this[this.length - 1]
   },

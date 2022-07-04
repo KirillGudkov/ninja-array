@@ -19,7 +19,7 @@ describe('get properties tests', () => {
     array.last = function() {
       return 123
     }
-    expect(array.last).toBe(123)
+    expect(array.last()).toBe(123)
   });
 
   /**
