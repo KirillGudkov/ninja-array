@@ -23,7 +23,7 @@ jobs:
           major-wording: 'major'
           patch-wording: 'patch,fixes,fix,feat,feature,fixed'
 
-        - name: Publish to npm
-          uses: JS-DevTools/npm-publish@v1
-          with:
-            token: ${{ secrets.NPM_PUBLISH_SECRET }}
+      - name: Publish to npm
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_PUBLISH_SECRET }}
