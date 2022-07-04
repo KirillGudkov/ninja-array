@@ -1,11 +1,9 @@
 Object.defineProperty(Array.prototype, 'last', {
   get: function last() {
-    if (!this._last) {
-      this.last = function() {
-        return this[this.length - 1]
-      }
+    if (this._last) {
+      return this._last()
     }
-    return this._last
+    return this[this.length - 1]
   },
   set(v) {
     this._last = v

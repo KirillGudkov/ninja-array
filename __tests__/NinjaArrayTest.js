@@ -15,6 +15,13 @@ describe('get properties tests', () => {
     expect(array.last).toBe(9)
   });
 
+  test('override last property', () => {
+    array.last = function() {
+      return 123
+    }
+    expect(array.last).toBe(123)
+  });
+
   /**
    * get first() tests
    *
