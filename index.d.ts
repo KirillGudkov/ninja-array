@@ -1,4 +1,4 @@
-export {};
+export {}
 
 declare class NinjaArray<T> {
 
@@ -75,5 +75,6 @@ declare class NinjaArray<T> {
 }
 
 declare global {
-  interface Array<T> extends NinjaArray<T> {}
+  interface Array<T> extends NinjaArray<T> {
+  }
 }
